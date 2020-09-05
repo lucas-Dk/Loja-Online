@@ -1,5 +1,6 @@
 #Importações
 import time
+import os
 #Final do programa
 def final():
   mensagem = 'Obrigado, volte sempre!'
@@ -69,8 +70,10 @@ while True:
 #Validação
   while again.strip() not in 'S' and again.strip() not in 'N':
     again = str(input('Comprar dnv? [S/N]: ')).upper()
+  if again == 'S':
+    os.system("clear")
 #Fim do programa se for digitado N
-  if again == 'N':
+  elif again == 'N':
     break
 #Função chamada que mostra o final
 final()
